@@ -2,16 +2,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WELCOME TO CHEESE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Not Found :&lpar;</title>
+    <link rel="stylesheet" href="../my-site/styles/tokens.css">
+    <link rel="stylesheet" href="../my-site/styles/global.css">
+    <style>
+        body {
+            --card-width: 28rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100svh;
+            padding: var(--space-3);
+
+            main {
+                max-width: var(--card-width);
+                padding: var(--space-3);
+                border: var(--border);
+                border-block-start: var(--rule);
+                background: var(--panel);
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header> …site name + logo… </header>
-    <nav> …same links on every page… </nav>
-    <main> …the page's own content… </main>
-    <footer> …same on every page… </footer>
+    <main>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" role="img" aria-labelledby="t">
+            <title id="t">A sad wedge of swiss cheese with a bite taken out</title>
+            <!-- wedge with a bite missing from the top right -->
+            <path d="M16 116 L80 28 L120 60 a14 14 0 0 0 6 22 l4 3 L138 116 Z" fill="#f2cf66" />
+            <!-- holes -->
+            <circle cx="58" cy="92" r="9" fill="#d9ae3f" />
+            <circle cx="96" cy="100" r="6" fill="#d9ae3f" />
+            <circle cx="82" cy="66" r="5" fill="#d9ae3f" />
+            <!-- sad face -->
+            <circle cx="66" cy="74" r="3" fill="#5a4a1e" />
+            <circle cx="88" cy="80" r="3" fill="#5a4a1e" />
+            <path d="M66 96 q11 -8 22 0" fill="none" stroke="#5a4a1e" stroke-width="3" stroke-linecap="round" />
+        </svg>
+    </main>
 </body>
 
 </html>

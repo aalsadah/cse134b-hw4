@@ -4,13 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WELCOME TO CHEESE</title>
+    <title>About Page</title>
+    <link rel="stylesheet" href="../my-site/styles/tokens.css">
+    <link rel="stylesheet" href="../my-site/styles/global.css">
+    <style>
+        body {
+            --figure-width: 11rem;
+            --figure-height: 24rem;
+    
+            max-width: var(--measure);
+            margin-inline: auto;
+            padding: var(--space-3);
+    
+            article {
+                figure {
+                    float: left;
+                    width: var(--figure-width);
+                    min-height: var(--figure-height);
+                    margin: 0 var(--space-2) var(--space-1) 0;
+                    padding: var(--space-2);
+                    border: var(--border);
+                    background: var(--panel);
+                }
+            }
+    
+            >footer {
+                clear: both;
+                padding: var(--space-2);
+                border-block-start: var(--rule);
+                background: var(--panel);
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header> …site name + logo… </header>
     <nav> …same links on every page… </nav>
-    <main> …the page's own content… </main>
+    <main>
+        <h1>About The CSE Cheese Society</h1>
+        <p>The CSE Cheese Society was founded in 2024, when a seminar ended
+        early and a cheese plate did not. What began as an argument over the
+        last piece of Comte became a weekly meeting, a shared spreadsheet of
+        tasting notes, and eventually a constitution written on a napkin. The
+        napkin has since been laminated.</p>
+        
+        <article>
+            <figure>
+                <figcaption>This figure has <code>float: left</code> and a fixed width.</figcaption>
+            </figure>
+            <p>Our mission is simple: taste widely, take notes, and never let
+            processed cheese food into the building. We host monthly tastings,
+            maintain the Short Guide to Cheese, and elect a Cheese of the Month
+            by ranked-choice ballot. Election disputes are settled by blind
+            tasting.</p>
+            <p>The Society is open to all students, staff, and the lactose-curious.
+            No experience required. Strong opinions optional but traditional.</p>
+            
+            <p>Floats were designed for exactly this — images in running text — which is why using them for whole page layouts
+                always felt like a workaround.</p>
+        </article>
+    </main>
     <footer> …same on every page… </footer>
 </body>
 
