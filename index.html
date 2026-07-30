@@ -29,11 +29,16 @@
     </nav>
 
     <main>
-        <h2>Welcome to The CSE Cheese Society</h2>
+        <h2>Welcome to The CSE Cheese Society Website</h2>
         <p>
             We are a community of students, staff, and cheese enthusiasts who gather to taste, learn about, and discuss cheeses from
             around the world. Whether you are an experienced cheese connoisseur or simply cheese-curious, you are welcome here.
         </p>
+
+        <button command="toggle-popover" commandfor="cheese-fact">Cheese Fact!</button>
+        <dialog id="cheese-fact" popover>
+            <p>Cheese is one of the world’s oldest prepared foods, with evidence of cheesemaking dating back <strong>thousands</strong> of years.</p>
+        </dialog>
     </main>
 
     <aside>
@@ -42,8 +47,7 @@
     </aside>
 
     <footer>
-        <h4>Cheese Fact</h4>
-        <p>Cheese is one of the world’s oldest prepared foods, with evidence of cheesemaking dating back thousands of years.</p>
+        <p>&copy; Copyright 2026 The CSE Cheese Society. Cheese responsibly.</p>
     </footer>
 </body>
 

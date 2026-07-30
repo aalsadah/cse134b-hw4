@@ -11,47 +11,6 @@
     <link rel="stylesheet" href="./styles/site.css">
     <link rel="stylesheet" href="./styles/05-flex-centering.css">
     <link rel="stylesheet" href="./styles/06-flex-page.css">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100svh;
-    
-            >header {
-                padding: var(--space-2) var(--space-3);
-                border-block-end: var(--border);
-                background: var(--panel);
-            }
-    
-            >main {
-                flex: 1;
-                padding: var(--space-3);
-            }
-    
-            >footer {
-                padding: var(--space-2) var(--space-3);
-                border-block-start: var(--border);
-                background: var(--panel);
-            }
-        }
-        body {
-            /* --card-width: 28rem;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100svh;
-            padding: var(--space-3); */
-
-            main {
-                max-width: var(--card-width);
-                padding: var(--space-3);
-                border: var(--border);
-                border-block-start: var(--rule);
-                background: var(--panel);
-      }
-    }
-    </style>
 </head>
 
 <body>
@@ -72,18 +31,77 @@
         <h2>Join The CSE Cheese Society</h2>
         <p>Membership is free, meetings are monthly, and the cheese is real.
         Fill out the form and the Keeper of the Cave will be in touch.</p>
-        <details>
-            <summary>Why Join?</summary>
+
+        <form>
+            <fieldset>
+            <label>Name: <input name="submitted-name" required></label>
+            <br>
+            <label>Email: <input name="submitted-email" required></label>
+            <br>
+            <fieldset>
+                <legend>
+                    Which family calls to you?
+                </legend>
+                <div>
+                    <input type="radio" id="fresh" name="family">
+                    <label for="fresh">Fresh</label>
+                </div>
+                <div>
+                    <input type="radio" id="soft-ripened" name="family">
+                    <label for="soft-ripened">Soft-ripened</label>
+                </div>
+                <div>
+                    <input type="radio" id="blue" name="family">
+                    <label for="blue">Blue</label>
+                </div>
+                <div>
+                    <input type="radio" id="hard" name="family">
+                    <label for="hard">Hard</label>
+                </div>
+                <div>
+                    <input type="radio" id="undecided" name="family">
+                    <label for="undecided">Undecided - that's why I'm here</label>
+                </div>
+            </fieldset>
+            <label>Tell us your favorite cheese: </label><input type="text" placeholder="e.g. Comte"></label>
+            <br>
+            <fieldset>
+                <legend>
+                    Which of these have you tasted?
+                </legend>
+                <div>
+                    <input type="checkbox" id="brie" name="brie">
+                    <label for="brie">Brie</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="roquefort" name="roquefort">
+                    <label for="roquefort">Roquefort</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="gouda" name="gouda">
+                    <label for="gouda">Aged Gouda</label>
+                </div>
+            </fieldset>
+            <button id="submit-form">Sign me up</button>
+            </fieldset>
+        </form>
+
+        <button command="show-modal" commandfor="why-join">Why join?</button>
+        <dialog id="why-join">
             <ul>
-                <li>- Monthly tastings. The Society buys the cheese. You bring opinions.</li>
-                <li>- Voting rights in the Cheese of the Month election.</li>
-                <li>- Access to THE CAVE (a mini-fridge, but a very serious one).</li>
-                <li>- A laminated membership card featuring the cheese of your choice.</li>
-                <li>- Amnesty program for recovering blue-cheese skeptics.</li>
+                <li>Monthly tastings. The Society buys the cheese. You bring opinions.</li>
+                <li>Voting rights in the Cheese of the Month election.</li>
+                <li>Access to THE CAVE (a mini-fridge, but a very serious one).</li>
+                <li>A laminated membership card featuring the cheese of your choice.</li>
+                <li>Amnesty program for recovering blue-cheese skeptics.</li>
             </ul>
-        </details>
+            <button command="close" commandfor="why-join">I'm convinced</button>
+        </dialog>
     </main>
-    <footer> …same on every page… </footer>
+
+    <footer>
+        <p>&copy; Copyright 2026 The CSE Cheese Society. Cheese responsibly.</p>
+    </footer>
 </body>
 
 </html>

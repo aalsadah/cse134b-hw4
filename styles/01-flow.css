@@ -23,3 +23,7 @@ article {
     border-inline-start: var(--rule);
     background: var(--panel);
 }
+input[type="checkbox"]:checked + label{
+    font-style: oblique;
+    font-size: large;
+}
