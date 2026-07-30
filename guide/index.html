@@ -9,34 +9,7 @@
     <link rel="stylesheet" href="../styles/tokens.css">
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/site.css">
-    <style>
-        body {
-            padding: var(--space-3);
-        }
-
-        section {
-            p {
-                padding: var(--space-2);
-                border: var(--border);
-                background: var(--panel);
-            }
-
-            strong,
-            em {
-                background: var(--paper);
-                outline: var(--border-width) var(--border-style) var(--accent);
-            }
-        }
-
-        article {
-            max-width: var(--measure);
-            margin-inline: auto;
-            padding: var(--space-2) var(--space-3);
-            border-inline-start: var(--rule);
-            background: var(--panel);
-        }
-    </style>
-
+    <link rel="stylesheet" href="../styles/01-flow.css">
 </head>
 
 <body>
@@ -136,9 +109,32 @@
                     immortality.</q>
                 <footer class="author">-Writer Clifton Fadiman</footer>
             </blockquote>
+
+            <section>
+                <h5>Try It Yourself</h5>
+                <form>
+                    <fieldset>
+                        <legend>Which of these have you tasted?</legend>
+            
+                        <input type="checkbox" , id="brie" , name="brie">
+                        <label for="brie">Brie</label>
+                        <br>
+                        <input type="checkbox" , id="roquefort" , name="roquefort">
+                        <label for="roquefort">Roquefort</label>
+                        <br>
+                        <input type="checkbox" , id="aged-gouda" , name="aged-gouda">
+                        <label for="aged-gouda">Aged Gouda</label>
+            
+                    </fieldset>
+                </form>
+                <label for="favorite-cheese">Tell us your favorite cheese and we will add it to the guide.</label>
+                <input type="text" id="favorite-cheese" name="favorite-cheese">
+                <button type="button">Add Cheese!</button>
+            </section>
+
         </article>
         </main>
-        
+        <footer></footer>
 </body>
 
 </html>
